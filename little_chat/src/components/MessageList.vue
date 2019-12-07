@@ -11,6 +11,9 @@
         <p class="message-text">
           {{ message.text }}
         </p>
+        <div class="user-typing">
+          <small class="text-muted" v-if="userTyping">@{{ userTyping }} is typing....</small>
+        </div>
         <div class="clearfix">
           <small class="text-muted float-right">{{ message.date }}</small>
         </div>
@@ -25,7 +28,8 @@ export default {
   name: 'MessageList',
   computed: {
     ...mapState([
-      'messages'
+      'messages',
+      'userTyping'
     ])
   }
 }

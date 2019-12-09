@@ -2,6 +2,14 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import moment from 'moment'
+import ElementUI from 'element-ui'
+
+import 'normalize.css/normalize.css'
+
+Vue.use(ElementUI)
+
+Vue.prototype.$moment = moment
 
 Vue.config.productionTip = false
 

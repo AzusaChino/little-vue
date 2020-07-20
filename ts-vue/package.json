@@ -1,0 +1,21 @@
+{
+  "name": "ts-vue",
+  "version": "1.0.0",
+  "description": "ts & vue",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ts",
+    "vue"
+  ],
+  "author": "az",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^4.3.0"
+  }
+}

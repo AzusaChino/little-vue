@@ -1,5 +1,15 @@
 <template>
   <div id="app">
-    <router-view/>
+    <Clock />
+    <router-view />
   </div>
 </template>
+
+<script>
+import Clock from '@/learning/Clock'
+
+export default {
+  name: 'App',
+  comments: { Clock }
+}
+</script>

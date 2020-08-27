@@ -41,6 +41,11 @@ const routes = [
     ]
   },
   {
+    path: "/shop/demo",
+    name: "ShopCartDemo",
+    component: () => import("../views/shop-cart-demo")
+  },
+  {
     path: "*",
     name: "404",
     component: () => import("../views/404")

@@ -14,18 +14,18 @@ const routes = [
     children: [
       {
         path: '/redirect/:path(.*)',
-        component: `<div>404</div>`
+        component: () => import('../views/error-page/404')
       }
     ]
   },
   {
     path: '/login',
-    component: `<div>404</div>`,
+    component: () => import('../views/error-page/404'),
     hidden: true
   },
   {
     path: '/auth-redirect',
-    component: `<div>404</div>`,
+    component: () => import('../views/error-page/404'),
     hidden: true
   },
   {
@@ -57,7 +57,7 @@ const routes = [
     children: [
       {
         path: 'index',
-        component: `<div>404</div>`,
+        component: () => import('../views/error-page/404'),
         name: 'Documentation',
         meta: { title: 'Documentation', icon: 'documentation', affix: true }
       }
@@ -70,7 +70,7 @@ const routes = [
     children: [
       {
         path: 'index',
-        component: `<div>404</div>`,
+        component: () => import('../views/error-page/404'),
         name: 'Guide',
         meta: { title: 'Guide', icon: 'guide', noCache: true }
       }
@@ -84,7 +84,7 @@ const routes = [
     children: [
       {
         path: 'index',
-        component: `<div>404</div>`,
+        component: () => import('../views/error-page/404'),
         name: 'Profile',
         meta: { title: 'Profile', icon: 'user', noCache: true }
       }
@@ -94,8 +94,11 @@ const routes = [
   { path: '*', redirect: '/404', hidden: true }
 ]
 
-const router = new VueRouter({
+const createRouter = () => new VueRouter({
+  scrollBehavior: () => ({ y: 0 }),
   routes
 })
+
+const router = createRouter()
 
 export default router

@@ -53,8 +53,7 @@ export default {
     }
   },
   data() {
-    this.onlyOneChild = null
-    return {}
+    return { onlyOneChild: null }
   },
   methods: {
     hasOneShowingChild(children = [], parent) {
